@@ -17,7 +17,7 @@ import StatusSelector from '@components/main/Desktop/StatusSelector';
 import CouncilSelector from '@components/main/Desktop/CouncilSelector';
 // import ShareableLinkCreator from '@components/main/Desktop/ShareableLinkCreator';
 import ExportButton from '@components/main/Desktop/Export/ExportButton';
-
+import { getServiceRequests } from '@utils/DataService';
 // import GearButton from '@components/common/GearButton';
 // import clsx from 'clsx';
 
@@ -128,6 +128,10 @@ function FilterMenu({ resetMap, resetAddressSearch }) {
           {/* <div className={classes.selectorWrapper}>
             <ShareableLinkCreator />
           </div> */}
+          {/* Testing fetching data through Socrata API: */}
+          <button onClick={getServiceRequests}>
+            Get data
+          </button>
           <div className={`${classes.selectorWrapper} ${classes.export}`}>
             <ExportButton />
           </div>
